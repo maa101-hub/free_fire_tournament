@@ -1,0 +1,219 @@
+/* Registration Page Specific Styles */
+.register-container {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  background: var(--gradient-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 800px;
+  background: var(--gradient-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--card-radius-lg);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.register-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.progress-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+}
+
+.progress-step {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-charcoal);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+  transition: all var(--transition-medium);
+}
+
+.progress-step.active {
+  border-color: var(--accent-orange);
+  background: var(--accent-orange);
+  color: var(--text-white);
+  box-shadow: 0 0 20px var(--accent-orange-glow);
+}
+
+.progress-step.completed {
+  border-color: var(--accent-blue);
+  background: var(--accent-blue);
+  color: var(--text-white);
+}
+
+.form-section {
+  display: none;
+  animation: fadeInRight 0.4s ease forwards;
+}
+
+.form-section.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.2);
+}
+
+.type-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.type-option {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+}
+
+.type-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.type-option.selected {
+  border-color: var(--accent-orange);
+  background: rgba(255, 102, 0, 0.1);
+  box-shadow: 0 0 20px var(--accent-orange-glow);
+}
+
+.type-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.type-name {
+  font-family: 'Orbitron', monospace;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.type-fee {
+  color: var(--accent-orange);
+  font-size: 0.85rem;
+}
+
+.qr-section {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+}
+
+.upload-zone {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+}
+
+.upload-zone:hover {
+  border-color: var(--accent-orange);
+  background: rgba(255, 102, 0, 0.05);
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .type-selector {
+    grid-template-columns: 1fr;
+  }
+  .register-card {
+    padding: 24px;
+  }
+}

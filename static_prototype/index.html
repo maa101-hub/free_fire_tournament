@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Fire Championship Arena – Compete in premium esports tournaments, qualify through brackets, and win real rewards. Join Solo, Duo, and Squad tournaments today.">
+  <meta name="keywords" content="Free Fire, esports, tournament, gaming, championship, battle royale">
+  <title>Free Fire Championship Arena | Premium Esports Tournaments</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">🔥</div>
+        <span>FF ARENA</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#tournaments">Tournaments</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#prize-pool">Prizes</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#faq">FAQ</a>
+        <a href="register.html" class="btn btn-primary btn-sm nav-cta">Register Now</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/hero-bg.jpg" alt="Free Fire Championship" loading="eager">
+    </div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="live-dot"></span>
+        Season 4 — Live Now
+      </div>
+      <h1>
+        <span class="gradient-text">Free Fire</span><br>
+        Championship <span class="blue-text">Arena</span>
+      </h1>
+      <p class="hero-subtitle">Compete, Qualify, and Win Real Rewards in the most premium Free Fire tournament platform.</p>
+
+      <div class="prize-pool-hero">
+        <span class="trophy">🏆</span>
+        <div>
+          <div class="prize-label">Total Prize Pool</div>
+          <div class="prize-amount">₹50,000</div>
+        </div>
+      </div>
+
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-value" id="countdown-days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="countdown-hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="countdown-minutes">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-item">
+          <div class="countdown-value" id="countdown-seconds">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="register.html" class="btn btn-primary" id="hero-join-btn">🎮 Join Tournament</a>
+        <a href="#tournaments" class="btn btn-secondary" id="hero-view-btn">View Tournaments</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLOATING STATS ============ -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <span class="stat-icon">🎮</span>
+          <div class="stat-value" data-target="12500">0</div>
+          <div class="stat-label">Total Players</div>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-icon">⚔️</span>
+          <div class="stat-value" data-target="48">0</div>
+          <div class="stat-label">Active Tournaments</div>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-icon">💰</span>
+          <div class="stat-value" data-target="250000" data-prefix="₹">0</div>
+          <div class="stat-label">Prize Distributed</div>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-icon">👑</span>
+          <div class="stat-value" data-target="320">0</div>
+          <div class="stat-label">Champions Crowned</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOURNAMENT TYPES ============ -->
+  <section class="tournaments-section" id="tournaments">
+    <div class="container">
+      <h2 class="section-title reveal">Choose Your Battle</h2>
+      <p class="section-subtitle reveal">Pick your tournament type and dominate the arena</p>
+
+      <div class="tournament-grid">
+        <!-- Solo -->
+        <div class="tournament-card reveal">
+          <div class="card-icon">🎯</div>
+          <div class="card-type">Solo Battle</div>
+          <h3>Solo Tournament</h3>
+          <div class="card-details">
+            <div class="detail-row">
+              <span class="detail-label">Players</span>
+              <span class="detail-value">1 Player</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Entry Fee</span>
+              <span class="detail-value highlight">₹30</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Prize Pool</span>
+              <span class="detail-value highlight">₹500</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Slots</span>
+              <span class="detail-value">42/50</span>
+            </div>
+          </div>
+          <div class="slots-bar">
+            <div class="slots-bar-fill" style="width: 84%"></div>
+          </div>
+          <br>
+          <a href="register.html" class="btn btn-primary" id="register-solo-btn">Register Now</a>
+        </div>
+
+        <!-- Duo -->
+        <div class="tournament-card reveal">
+          <div class="card-icon">👥</div>
+          <div class="card-type">Duo Battle</div>
+          <h3>Duo Tournament</h3>
+          <div class="card-details">
+            <div class="detail-row">
+              <span class="detail-label">Players</span>
+              <span class="detail-value">2 Players</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Entry Fee</span>
+              <span class="detail-value highlight">₹50</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Prize Pool</span>
+              <span class="detail-value highlight">₹1,000</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Slots</span>
+              <span class="detail-value">18/25</span>
+            </div>
+          </div>
+          <div class="slots-bar">
+            <div class="slots-bar-fill" style="width: 72%"></div>
+          </div>
+          <br>
+          <a href="register.html" class="btn btn-primary" id="register-duo-btn">Register Now</a>
+        </div>
+
+        <!-- Squad -->
+        <div class="tournament-card reveal">
+          <div class="card-icon">🛡️</div>
+          <div class="card-type">Squad Battle</div>
+          <h3>Squad Tournament</h3>
+          <div class="card-details">
+            <div class="detail-row">
+              <span class="detail-label">Players</span>
+              <span class="detail-value">4 Players</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Entry Fee</span>
+              <span class="detail-value highlight">₹100</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Prize Pool</span>
+              <span class="detail-value highlight">₹2,500</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Slots</span>
+              <span class="detail-value">10/12</span>
+            </div>
+          </div>
+          <div class="slots-bar">
+            <div class="slots-bar-fill" style="width: 83%"></div>
+          </div>
+          <br>
+          <a href="register.html" class="btn btn-primary" id="register-squad-btn">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title reveal">How It Works</h2>
+      <p class="section-subtitle reveal">Five simple steps to glory</p>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">📝</div>
+          <div class="timeline-content">
+            <h4>Register Your Team</h4>
+            <p>Sign up with your squad and fill in your Free Fire details.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">💳</div>
+          <div class="timeline-content">
+            <h4>Pay Entry Fee</h4>
+            <p>Complete payment via UPI/wallet and upload screenshot.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">🎮</div>
+          <div class="timeline-content">
+            <h4>Join the Match</h4>
+            <p>Receive room ID and password before match starts.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">⚔️</div>
+          <div class="timeline-content">
+            <h4>Qualify &amp; Compete</h4>
+            <p>Battle through qualifiers and climb the bracket.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">🏆</div>
+          <div class="timeline-content">
+            <h4>Win the Prize</h4>
+            <p>Champions receive instant prize money to their account.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOURNAMENT FORMAT (BRACKET) ============ -->
+  <section class="format-section" id="format">
+    <div class="container">
+      <h2 class="section-title reveal">Tournament Format</h2>
+      <p class="section-subtitle reveal">Battle through the bracket to become champion</p>
+
+      <div class="bracket-container reveal">
+        <div class="bracket-stage">
+          <div class="bracket-node">
+            <div class="node-label">ROUND 1</div>
+            Qualifiers
+          </div>
+        </div>
+        <div class="bracket-connector"></div>
+        <div class="bracket-stage">
+          <div class="bracket-node">
+            <div class="node-label">TOP 8</div>
+            Quarter Finals
+          </div>
+        </div>
+        <div class="bracket-connector"></div>
+        <div class="bracket-stage">
+          <div class="bracket-node">
+            <div class="node-label">TOP 4</div>
+            Semi Finals
+          </div>
+        </div>
+        <div class="bracket-connector"></div>
+        <div class="bracket-stage">
+          <div class="bracket-node">
+            <div class="node-label">TOP 2</div>
+            Grand Final
+          </div>
+        </div>
+        <div class="bracket-connector"></div>
+        <div class="bracket-stage">
+          <div class="bracket-node champion">
+            <div class="node-label">🏆 WINNER</div>
+            Champion
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UPCOMING TOURNAMENTS ============ -->
+  <section class="upcoming-section" id="upcoming">
+    <div class="container">
+      <h2 class="section-title reveal">Upcoming Tournaments</h2>
+      <p class="section-subtitle reveal">Register before slots run out</p>
+
+      <div class="upcoming-grid">
+        <div class="upcoming-card reveal">
+          <div class="card-header">
+            <h3>🔥 Fire Storm Solo</h3>
+            <span class="status-badge open">Open</span>
+          </div>
+          <div class="card-meta">
+            <div class="meta-item">
+              <div class="meta-label">Entry Fee</div>
+              <div class="meta-value">₹30</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Prize Pool</div>
+              <div class="meta-value prize">₹500</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Date</div>
+              <div class="meta-value">Jun 15, 2026</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Time</div>
+              <div class="meta-value">8:00 PM</div>
+            </div>
+          </div>
+          <div class="slots-info">
+            <span class="slots-text">Remaining Slots</span>
+            <span class="slots-count">8 / 50</span>
+          </div>
+          <div class="slots-bar">
+            <div class="slots-bar-fill" style="width: 84%"></div>
+          </div>
+          <br>
+          <a href="register.html" class="btn btn-primary btn-sm" id="register-firestorm-btn" style="width:100%">Register Now</a>
+        </div>
+
+        <div class="upcoming-card reveal">
+          <div class="card-header">
+            <h3>⚡ Thunder Duo Cup</h3>
+            <span class="status-badge filling">Filling Fast</span>
+          </div>
+          <div class="card-meta">
+            <div class="meta-item">
+              <div class="meta-label">Entry Fee</div>
+              <div class="meta-value">₹50</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Prize Pool</div>
+              <div class="meta-value prize">₹1,000</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Date</div>
+              <div class="meta-value">Jun 18, 2026</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Time</div>
+              <div class="meta-value">9:00 PM</div>
+            </div>
+          </div>
+          <div class="slots-info">
+            <span class="slots-text">Remaining Slots</span>
+            <span class="slots-count">3 / 25</span>
+          </div>
+          <div class="slots-bar">
+            <div class="slots-bar-fill" style="width: 88%"></div>
+          </div>
+          <br>
+          <a href="register.html" class="btn btn-primary btn-sm" id="register-thunder-btn" style="width:100%">Register Now</a>
+        </div>
+
+        <div class="upcoming-card reveal">
+          <div class="card-header">
+            <h3>🛡️ Elite Squad Showdown</h3>
+            <span class="status-badge open">Open</span>
+          </div>
+          <div class="card-meta">
+            <div class="meta-item">
+              <div class="meta-label">Entry Fee</div>
+              <div class="meta-value">₹100</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Prize Pool</div>
+              <div class="meta-value prize">₹2,500</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Date</div>
+              <div class="meta-value">Jun 22, 2026</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Time</div>
+              <div class="meta-value">7:30 PM</div>
+            </div>
+          </div>
+          <div class="slots-info">
+            <span class="slots-text">Remaining Slots</span>
+            <span class="slots-count">5 / 12</span>
+          </div>
+          <div class="slots-bar">
+            <div class="slots-bar-fill" style="width: 58%"></div>
+          </div>
+          <br>
+          <a href="register.html" class="btn btn-primary btn-sm" id="register-elite-btn" style="width:100%">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIZE POOL ============ -->
+  <section class="prize-section" id="prize-pool">
+    <div class="container">
+      <h2 class="section-title reveal">Prize Pool</h2>
+      <p class="section-subtitle reveal">Glory and rewards await the champions</p>
+
+      <div class="prize-grid">
+        <div class="prize-card silver reveal">
+          <span class="prize-medal">🥈</span>
+          <div class="prize-rank">2nd Place</div>
+          <div class="prize-amount">₹7,000</div>
+          <div class="prize-extras">+ Silver Trophy + Certificate</div>
+        </div>
+
+        <div class="prize-card gold reveal">
+          <span class="prize-medal">🥇</span>
+          <div class="prize-rank">1st Place</div>
+          <div class="prize-amount">₹15,000</div>
+          <div class="prize-extras">+ Gold Trophy + Gaming Gear + Certificate</div>
+        </div>
+
+        <div class="prize-card bronze reveal">
+          <span class="prize-medal">🥉</span>
+          <div class="prize-rank">3rd Place</div>
+          <div class="prize-amount">₹3,000</div>
+          <div class="prize-extras">+ Bronze Trophy + Certificate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEADERBOARD ============ -->
+  <section class="leaderboard-section" id="leaderboard">
+    <div class="container">
+      <h2 class="section-title reveal">Leaderboard</h2>
+      <p class="section-subtitle reveal">Top performing teams this season</p>
+
+      <div class="reveal" style="overflow-x:auto;">
+        <table class="leaderboard-table" id="leaderboardTable">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team</th>
+              <th>Matches</th>
+              <th>Kill Pts</th>
+              <th>Place Pts</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="top-1">
+              <td><span class="rank-cell rank-1">👑 1</span></td>
+              <td><div class="team-cell"><div class="team-avatar" style="background:var(--gradient-gold)">PX</div> Phoenix Esports</div></td>
+              <td>12</td>
+              <td>156</td>
+              <td>89</td>
+              <td><span class="points-cell">245</span></td>
+            </tr>
+            <tr class="top-2">
+              <td><span class="rank-cell rank-2">🥈 2</span></td>
+              <td><div class="team-cell"><div class="team-avatar" style="background:var(--gradient-blue)">SG</div> Storm Gaming</div></td>
+              <td>12</td>
+              <td>142</td>
+              <td>82</td>
+              <td><span class="points-cell">224</span></td>
+            </tr>
+            <tr class="top-3">
+              <td><span class="rank-cell rank-3">🥉 3</span></td>
+              <td><div class="team-cell"><div class="team-avatar" style="background:var(--gradient-bronze)">DR</div> Dragon Riders</div></td>
+              <td>12</td>
+              <td>128</td>
+              <td>78</td>
+              <td><span class="points-cell">206</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-cell">4</span></td>
+              <td><div class="team-cell"><div class="team-avatar">TF</div> Team Fury</div></td>
+              <td>12</td>
+              <td>115</td>
+              <td>72</td>
+              <td><span class="points-cell">187</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-cell">5</span></td>
+              <td><div class="team-cell"><div class="team-avatar">BK</div> Black Knights</div></td>
+              <td>11</td>
+              <td>108</td>
+              <td>65</td>
+              <td><span class="points-cell">173</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-cell">6</span></td>
+              <td><div class="team-cell"><div class="team-avatar">VX</div> Vortex Elite</div></td>
+              <td>11</td>
+              <td>98</td>
+              <td>62</td>
+              <td><span class="points-cell">160</span></td>
+            </tr>
+            <tr>
+              <td><span class="rank-cell">7</span></td>
+              <td><div class="team-cell"><div class="team-avatar">NX</div> Nexus Squad</div></td>
+              <td>10</td>
+              <td>92</td>
+              <td>55</td>
+              <td><span class="points-cell">147</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WINNERS SHOWCASE ============ -->
+  <section class="winners-section" id="winners">
+    <div class="container">
+      <h2 class="section-title reveal">Hall of Champions</h2>
+      <p class="section-subtitle reveal">Previous tournament winners</p>
+
+      <div class="winners-grid">
+        <div class="winner-card reveal">
+          <span class="champion-badge">🏆 CHAMPION</span>
+          <div class="winner-logo">🔥</div>
+          <h3>Phoenix Esports</h3>
+          <p class="winner-tournament">Season 3 Grand Finals</p>
+          <div class="winner-prize">₹15,000</div>
+        </div>
+
+        <div class="winner-card reveal">
+          <span class="champion-badge">🏆 CHAMPION</span>
+          <div class="winner-logo" style="background:var(--gradient-blue)">⚡</div>
+          <h3>Storm Gaming</h3>
+          <p class="winner-tournament">Season 2 Elite Cup</p>
+          <div class="winner-prize">₹10,000</div>
+        </div>
+
+        <div class="winner-card reveal">
+          <span class="champion-badge">🏆 CHAMPION</span>
+          <div class="winner-logo" style="background:linear-gradient(135deg,#8b5cf6,#ff2d2d)">🐉</div>
+          <h3>Dragon Riders</h3>
+          <p class="winner-tournament">Season 1 Championship</p>
+          <div class="winner-prize">₹8,000</div>
+        </div>
+
+        <div class="winner-card reveal">
+          <span class="champion-badge">🏆 CHAMPION</span>
+          <div class="winner-logo" style="background:linear-gradient(135deg,#00c864,#00c8ff)">🛡️</div>
+          <h3>Vortex Elite</h3>
+          <p class="winner-tournament">Season 2 Squad Showdown</p>
+          <div class="winner-prize">₹6,000</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ SECTION ============ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <p class="section-subtitle reveal">Everything you need to know</p>
+
+      <div class="faq-container">
+        <div class="faq-item reveal" id="faq-1">
+          <button class="faq-question" aria-expanded="false">
+            How do I register for a tournament?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Click the "Register Now" button on any tournament card. Fill in your team details including Team Name, Captain Name, Free Fire UID, and Mobile Number. Select your tournament type (Solo, Duo, or Squad) and complete the entry fee payment. Upload a screenshot of payment and submit your registration. You'll receive confirmation within 24 hours.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-2">
+          <button class="faq-question" aria-expanded="false">
+            How do I pay the entry fees?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Entry fees can be paid via UPI, Google Pay, PhonePe, or Paytm. After selecting your tournament, you'll see the payment details. Make the payment to the provided UPI ID and upload a screenshot as proof. Our team will verify payment and approve your registration within a few hours.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-3">
+          <button class="faq-question" aria-expanded="false">
+            How are winners selected?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Winners are determined through a points-based system combining Kill Points and Placement Points. Teams progress through Qualifiers → Quarter Finals → Semi Finals → Grand Final. The team with the highest total points in the Grand Final is crowned the champion. Detailed scoring rules are shared before every tournament.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-4">
+          <button class="faq-question" aria-expanded="false">
+            When are prizes distributed?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Prizes are distributed within 24-48 hours after the tournament results are published and verified. Winners will receive prize money directly to their UPI-linked bank account or wallet. A breakdown of prizes is shared on the results page for full transparency.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" id="faq-5">
+          <button class="faq-question" aria-expanded="false">
+            Can I change my team after registration?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Team changes are allowed up to 2 hours before the tournament starts. Contact our support team via WhatsApp or Discord with your registration ID and the details of the changes you'd like to make. Note that the captain cannot be changed after registration.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Get In Touch</h2>
+      <p class="section-subtitle reveal">Need help? We're just a message away</p>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal" id="contact-whatsapp">
+          <div class="contact-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>Quick Support</p>
+        </div>
+        <div class="contact-card reveal" id="contact-discord">
+          <div class="contact-icon">🎧</div>
+          <h3>Discord</h3>
+          <p>Community Server</p>
+        </div>
+        <div class="contact-card reveal" id="contact-instagram">
+          <div class="contact-icon">📸</div>
+          <h3>Instagram</h3>
+          <p>@ffarena_official</p>
+        </div>
+        <div class="contact-card reveal" id="contact-email">
+          <div class="contact-icon">📧</div>
+          <h3>Email</h3>
+          <p>support@ffarena.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            🔥 <span>FF ARENA</span>
+          </div>
+          <p>The ultimate Free Fire tournament platform. Compete, qualify, and win real rewards in professional esports tournaments.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="Discord">🎧</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="#tournaments">Tournaments</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="#leaderboard">Leaderboard</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Tournament Rules</a></li>
+            <li><a href="#">Report Issue</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FF Arena. All rights reserved.</p>
+        <p>Made with 🔥 for Free Fire Champions</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
