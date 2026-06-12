@@ -5,6 +5,8 @@ import { authOptions } from "../../auth/[...nextauth]/route";
 
 const prisma = new PrismaClient();
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req) {
   try {
     const session = await getServerSession(authOptions);
